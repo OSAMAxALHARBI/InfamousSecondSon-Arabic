@@ -17,9 +17,9 @@
 
 1. حمّل `InfamousSecondSon-Arabic-1.0.zip` من [Releases](../../releases/latest) وفك ضغطه.
 2. افتح `InfamousArabic.exe`. إذا طلعت رسالة "Windows protected your PC" اضغط More info ثم Run anyway (البرنامج مو موقّع رقميًا).
-3. **الخطوة ١ في البرنامج:** اختر ملف اللعبة PKG، ملف التحديث 1.07 PKG، مجلد PkgTool.Core (اللي فيه `PkgTool.Core.dll`)، والمكان اللي تبي فيه مجلد اللعبة. اضغط «جهّز مجلد اللعبة» وانتظر (عندي ياخذ حوالي 3 دقائق). يطلع لك مجلد `inFAMOUS Second Son`. ملفات الـ PKG حقتك ما تتغيّر.
+3. **الخطوة ٢ في البرنامج («جهّز مجلد اللعبة»):** اختر ملف اللعبة PKG، ملف التحديث 1.07 PKG، مجلد PkgTool.Core (اللي فيه `PkgTool.Core.dll`)، والمكان اللي تبي فيه مجلد اللعبة. اضغط «جهّز مجلد اللعبة» وانتظر (عندي ياخذ حوالي 3 دقائق). يطلع لك مجلد `inFAMOUS Second Son`. ملفات الـ PKG حقتك ما تتغيّر.
 4. **البورت:** فك ضغطه وافتح `inFAMOUS Second Son.exe`. في **Game folder** اختر مجلد اللعبة، وفي شاشة **Play** خل لغة اللعبة **English** (التعريب يحل محل الإنجليزي). اضغط **Play** مرة وتأكد إن اللعبة تشتغل، وبعدين سكّرها.
-5. **الخطوة ٢ في البرنامج:** اضغط «ثبّت التعريب». البرنامج يتأكد إن ملفاتك أصلية ويحفظ نسخة منها في `InfamousArabic-backup` داخل مجلد اللعبة.
+5. **الخطوة ٣ في البرنامج:** اضغط «ثبّت التعريب». البرنامج يتأكد إن ملفاتك أصلية ويحفظ نسخة منها في `InfamousArabic-backup` داخل مجلد اللعبة.
 6. شغّل اللعبة من البورت. **أول تشغيل بعد التثبيت ياخذ وقت طويل** (عندي حوالي 15 دقيقة): البورت يعيد تجهيز الشيدرات. التشغيل اللي بعده عادي.
 7. فعّل الترجمة النصية (مقفلة في اللعبة من الأساس): «خيارات» ← «الترجمة النصية» ← «تشغيل».
 
@@ -61,13 +61,13 @@ No game file is included. The program patches the text files of your own copy.
 1. Download `InfamousSecondSon-Arabic-1.0.zip` from [Releases](../../releases/latest) and extract it.
 2. Open `InfamousArabic.exe`. If "Windows protected your PC" appears, click More info, then Run anyway (the program is
    not digitally signed).
-3. **Step 1 in the program:** choose the game PKG, the 1.07 update PKG, the PkgTool.Core folder (the one with
+3. **Step 2 in the program ("Make the game folder"):** choose the game PKG, the 1.07 update PKG, the PkgTool.Core folder (the one with
    `PkgTool.Core.dll`) and where to make the game folder. Click "Make the game folder" and wait (about 3 minutes on my
    PC). You get a folder named `inFAMOUS Second Son`. Your PKG files are not changed.
 4. **The port:** extract it and open `inFAMOUS Second Son.exe`. Under **Game folder**, choose the game folder; on the
    **Play** screen, set the game language to **English** (the translation replaces English). Click **Play** once,
    check that the game starts, then close it.
-5. **Step 2 in the program:** click "Install". The program checks that your files are the original ones and keeps a
+5. **Step 3 in the program:** click "Install". The program checks that your files are the original ones and keeps a
    copy in `InfamousArabic-backup` inside the game folder.
 6. Start the game from the port. **The first start after installing takes a long time** (about 15 minutes on my PC):
    the port compiles its shaders again. Later starts are normal.

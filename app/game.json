@@ -1,0 +1,114 @@
+{
+ "id": "InfamousSecondSon",
+ "exe_name": "InfamousArabic",
+ "github": "OSAMAxALHARBI/InfamousSecondSon-Arabic",
+ "site_url": "https://iosamai.com/game.html?g=infamous-second-son",
+ "name": {
+  "ar": "إنفيمس: الابن الثاني",
+  "en": "inFAMOUS Second Son"
+ },
+ "platform": {
+  "ar": "بورت بي سي",
+  "en": "iss_pc PC port"
+ },
+ "backup_dir": "InfamousArabic-backup",
+ "patch_root": "",
+ "must_have": [
+  "eboot.bin",
+  "art/cache/lang_english_text.xpps"
+ ],
+ "close_processes": [
+  "inFAMOUS Second Son",
+  "tlg-probe-v2"
+ ],
+ "folder_label": {
+  "ar": "مجلد اللعبة (اللي فيه eboot.bin)",
+  "en": "Game folder (the one with eboot.bin)"
+ },
+ "folder_hint": {
+  "ar": "اختر مجلد اللعبة اللي فيه eboot.bin ومجلد art (الخطوة ٢ تجهّزه من ملفات الـ PKG).",
+  "en": "Choose the game folder with eboot.bin and the art folder (step 2 makes it from your PKG files)."
+ },
+ "mismatch": {
+  "ar": "جهّز مجلد اللعبة من جديد من النسخة الأمريكية (CUSA00223) مع التحديث 1.07، وبعدين ثبّت التعريب.",
+  "en": "Make the game folder again from the US game (CUSA00223) with update 1.07, then install the translation."
+ },
+ "before": {
+  "ar": "تحتاج ملفات نسختك من اللعبة على PS4. البرنامج يجهّز منها مجلد اللعبة، وبعدين تشغّل اللعبة في البورت مرة وتثبّت التعريب.",
+  "en": "You need the files of your own PS4 copy. The program makes the game folder from them; then you start the game in the port once and install the translation."
+ },
+ "requirements": [
+  {
+   "ar": "ويندوز 10 أو 11 (64 بت)، كرت شاشة يدعم Vulkan 1.3 (يفضّل 6 جيجا ذاكرة شاشة)، وحوالي 35 جيجا مساحة.",
+   "en": "Windows 10 or 11 (64-bit), a Vulkan 1.3 graphics card (6 GB of VRAM recommended), about 35 GB free."
+  },
+  {
+   "ar": "بورت iss_pc الإصدار 1.0 (مجاني، من GitHub).",
+   "en": "The iss_pc port, version 1.0 (free, on GitHub)."
+  },
+  {
+   "ar": "نسختك الأمريكية من اللعبة (CUSA00223): ملف اللعبة PKG وملف التحديث 1.07 PKG.",
+   "en": "Your own US copy (CUSA00223): the game PKG and the update 1.07 PKG."
+  }
+ ],
+ "links": [
+  {
+   "text": {
+    "ar": "البورت iss_pc",
+    "en": "iss_pc port"
+   },
+   "url": "https://github.com/HayatoG/iss_pc/releases/tag/v1.0"
+  }
+ ],
+ "ps4_pkg": {
+  "folder_name": "inFAMOUS Second Son",
+  "check_file": "eboot.bin",
+  "game_label": {
+   "ar": "ملف اللعبة (PKG)",
+   "en": "Game PKG"
+  },
+  "update_label": {
+   "ar": "ملف التحديث (PKG) للإصدار 1.07",
+   "en": "Update 1.07 PKG"
+  },
+  "size_note": {
+   "ar": "35 جيجا",
+   "en": "35 GB"
+  },
+  "note": {
+   "ar": "تحتاج .NET Runtime (الإصدار 6 أو أحدث) وأداة PkgTool.Core 0.2. ملفات الـ PKG ما تتغيّر. إذا مجلد اللعبة عندك جاهز تخطّ هذي الخطوة.",
+   "en": "Needs the .NET Runtime (6 or newer) and PkgTool.Core 0.2. Your PKG files are not changed. Skip this step if your game folder is ready."
+  },
+  "links": [
+   {
+    "text": {
+     "ar": ".NET Runtime",
+     "en": "Microsoft download"
+    },
+    "url": "https://dotnet.microsoft.com/download/dotnet"
+   },
+   {
+    "text": {
+     "ar": "PkgTool.Core 0.2",
+     "en": "LibOrbisPkg on GitHub"
+    },
+    "url": "https://github.com/maxton/LibOrbisPkg/releases/tag/v0.2"
+   }
+  ]
+ },
+ "after_install": [
+  {
+   "ar": "اختر مجلد اللعبة في البورت، وخل لغة اللعبة English في شاشة Play.",
+   "en": "Choose the game folder in the port, and keep the game language on English (Play screen)."
+  },
+  {
+   "ar": "أول تشغيل بعد التثبيت ياخذ وقت طويل (البورت يعيد تجهيز الشيدرات)، وبعدها عادي.",
+   "en": "The first start after installing takes a long time (the port compiles its shaders again); later starts are normal."
+  },
+  {
+   "ar": "فعّل الترجمة النصية: «خيارات» ← «الترجمة النصية» ← «تشغيل».",
+   "en": "Turn on subtitles: Options > Subtitles > On."
+  }
+ ],
+ "version": "1.0"
+}
