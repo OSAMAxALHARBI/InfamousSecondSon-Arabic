@@ -6,6 +6,8 @@
 
 التعريب ما يحتوي أي ملف من ملفات اللعبة. البرنامج يعدّل ملفات النص اللي عندك أنت.
 
+🌐 **صفحة التعريب على موقعي:** [iosamai.com/infamous-second-son](https://iosamai.com/infamous-second-son/) · كل تعريباتي: [iosamai.com](https://iosamai.com/)
+
 ## اللي تحتاجه
 
 1. **كمبيوتر:** ويندوز 10 أو 11 (64 بت)، كرت شاشة يدعم Vulkan 1.3 (يفضّل 6 جيجا ذاكرة شاشة أو أكثر)، وحوالي 35 جيجا مساحة.
@@ -42,6 +44,8 @@
 
 Arabic translation of inFAMOUS Second Son (PS4 version) for the iss_pc PC port: dialogue, cutscenes, TV news, menus,
 missions, powers, upgrades, tips and trophies.
+
+🌐 **Translation page:** [iosamai.com/en/infamous-second-son](https://iosamai.com/en/infamous-second-son/) · all my translations: [iosamai.com/en](https://iosamai.com/en/)
 
 No game file is included. The program patches the text files of your own copy.
 
