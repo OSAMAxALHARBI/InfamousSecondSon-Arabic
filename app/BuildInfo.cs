@@ -6,9 +6,9 @@ using System.Reflection;
 [assembly: AssemblyDescription("Installs the Arabic translation of inFAMOUS Second Son")]
 [assembly: AssemblyCompany("Osama (iOsamai)")]
 [assembly: AssemblyCopyright("Osama (iOsamai), iosamai.com")]
-[assembly: AssemblyVersion("1.1.0.0")]
-[assembly: AssemblyFileVersion("1.1.0.0")]
-[assembly: AssemblyInformationalVersion("1.1 (Taareeb Installer 1.0)")]
+[assembly: AssemblyVersion("1.2.0.0")]
+[assembly: AssemblyFileVersion("1.2.0.0")]
+[assembly: AssemblyInformationalVersion("1.2 (Taareeb Installer 1.0)")]
 
 namespace Taareeb.Installer
 {

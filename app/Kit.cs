@@ -460,10 +460,29 @@ namespace Taareeb.Installer
                         throw new Failure("فشل بناء الملف " + f.Path + " وما تغيّر. اضغط «أزل التعريب» لإرجاع الملفات الأصلية.",
                                           "Building " + f.Path + " failed; that file was not changed. Press Uninstall to restore the original files.");
                     }
-                    if (File.Exists(dst)) { File.SetAttributes(dst, FileAttributes.Normal); File.Delete(dst); }
-                    File.Move(tmp, dst);
+                    Retry(f.Path, () =>
+                    {
+                        if (File.Exists(dst)) { File.SetAttributes(dst, FileAttributes.Normal); File.Delete(dst); }
+                        File.Move(tmp, dst);
+                    });
                     Log("wrote " + f.Path);
                     tick();
+                }
+        }
+
+        // an antivirus scan or an open launcher can hold a game file for a moment: retry for about two seconds, then
+        // name the file instead of the generic "unexpected error"
+        static void Retry(string rel, Action act)
+        {
+            for (int i = 0; ; i++)
+                try { act(); return; }
+                catch (IOException e)
+                {
+                    if (e is FileNotFoundException || e is DirectoryNotFoundException) throw;
+                    if (i < 10) { System.Threading.Thread.Sleep(200); continue; }
+                    Log("ERROR " + rel + " is in use: " + e.Message);
+                    throw new Failure("الملف " + rel + " مفتوح في برنامج ثاني. سكّر اللعبة ومشغّلها (Steam وغيره) واضغط الزر مرة ثانية.",
+                                      "The file " + rel + " is open in another program. Close the game and its launcher (Steam etc.) and press the button again.");
                 }
         }
 
@@ -495,7 +514,7 @@ namespace Taareeb.Installer
                 string dst = System.IO.Path.Combine(Root(g, dir), rel);
                 if (File.Exists(dst)) File.SetAttributes(dst, FileAttributes.Normal);
                 File.SetAttributes(b, FileAttributes.Normal);
-                File.Copy(b, dst, true);
+                Retry(rel, () => File.Copy(b, dst, true));
                 File.Delete(b);
                 Log("restored " + rel + " (not part of this version)");
                 n++;
@@ -530,7 +549,7 @@ namespace Taareeb.Installer
                     string dst = System.IO.Path.Combine(root, rel);
                     Directory.CreateDirectory(System.IO.Path.GetDirectoryName(dst));
                     if (File.Exists(dst)) File.SetAttributes(dst, FileAttributes.Normal);
-                    File.Copy(b, dst, true);
+                    Retry(rel, () => File.Copy(b, dst, true));
                     n++;
                 }
                 progress(i + 1, backups.Length + 1);
@@ -539,7 +558,7 @@ namespace Taareeb.Installer
             {
                 string dst = System.IO.Path.Combine(root, f.Path);
                 if (f.Stock != null || !File.Exists(dst)) continue;
-                if (Sha(dst) == f.Patched) { File.SetAttributes(dst, FileAttributes.Normal); File.Delete(dst); removed++; }
+                if (Sha(dst) == f.Patched) { File.SetAttributes(dst, FileAttributes.Normal); Retry(f.Path, () => File.Delete(dst)); removed++; }
                 else Log("left " + f.Path + " (not the translation's file)");
             }
             foreach (var e in entries)
